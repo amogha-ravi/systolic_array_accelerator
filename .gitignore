@@ -1,0 +1,13 @@
+# Simulation outputs
+*.out
+*.vcd
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Logs
+*.log

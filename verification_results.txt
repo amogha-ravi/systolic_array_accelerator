@@ -1,0 +1,21 @@
+4x4 Systolic Array Accelerator
+
+Verification Summary
+====================
+
+Matrix Size: 4x4
+Data Width : 8-bit signed
+Accumulator: 32-bit signed
+
+Randomized Regression:
+500 test cases
+
+Outputs checked:
+8000
+
+Results:
+TOTAL PASS : 8000 / 8000
+TOTAL FAIL : 0 / 8000
+
+Status:
+ALL TESTS PASSED
