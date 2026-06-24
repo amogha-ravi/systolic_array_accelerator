@@ -1,24 +1,81 @@
-# Systolic Array Accelerator
+# Parameterized Systolic Array AI/DSP Hardware Accelerator
 
-A parameterized 4×4 systolic-array matrix multiplication accelerator implemented in Verilog.
+A scalable Verilog-based hardware accelerator implementing a parameterized systolic array architecture for matrix multiplication.
 
 ## Features
 
-- Signed 8-bit inputs
-- 32-bit accumulation
-- Parameterized Processing Element (PE)
-- 4×4 systolic mesh architecture
-- Randomized verification environment
+- Parameterized NxN systolic array
+- Signed fixed-point arithmetic support
+- Pipelined MAC (Multiply-Accumulate) processing elements
+- Scalable architecture
+- Automated test-vector generation
+- Self-checking verification environment
+- Randomized regression testing
+- GTKWave waveform debugging
+- 8000/8000 verification tests passed
 
-## Verification
+---
 
-- 500 randomized matrix multiplication tests
-- 8000 output comparisons
-- 100% pass rate
+## Architecture
 
-## Directory Structure
+The accelerator consists of:
 
-rtl/      -> RTL source files
-tb/       -> Testbenches
-vectors/  -> Verification vectors
-sim/      -> Simulation outputs
+- Processing Elements (PEs)
+- Horizontal A-data propagation
+- Vertical B-data propagation
+- Local MAC accumulation
+- Output collection network
+
+---
+
+## Repository Structure
+
+rtl/
+- pe.v
+- systolic_array.v
+
+tb/
+- tb_pe.v
+- tb_systolic_array.v
+- tb_systolic_random.v
+
+vectors/
+- random test vectors
+- golden reference outputs
+
+scripts/
+- automated vector generation
+
+---
+
+## Verification Results
+
+Regression Suite:
+
+8000 / 8000 PASS
+
+Element-Level Accuracy:
+
+100%
+
+---
+
+## Tools Used
+
+- Verilog
+- Icarus Verilog
+- GTKWave
+- Python
+- Git
+- GitHub
+
+---
+
+## Future Work
+
+- AXI-stream interface
+- Fixed-point Q8.8 datapath
+- Performance benchmarking
+- FPGA implementation
+- Vivado synthesis
+- RISC-V integration
